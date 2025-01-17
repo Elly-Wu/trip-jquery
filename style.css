@@ -1,0 +1,344 @@
+@charset "UTF-8";
+body {
+  background-color: #979797;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+.page {
+  max-width: 640px;
+  margin: 0 auto 30px auto;
+}
+
+.panel {
+  background-color: #fff;
+  color: #666;
+  box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.2);
+  overflow: auto;
+}
+
+button {
+  border: none;
+}
+
+/********** LOGO **********/
+h1 {
+  text-align: center;
+  width: 200px;
+  height: 100px;
+  margin: 40px auto 40px auto;
+}
+/* background-color: #666;
+  background-repeat: no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;} */
+
+/********** TYPOGRAPHY **********/
+body,
+button {
+  font-family: "Jacques Francois", serif;
+}
+
+h2,
+h3 {
+  font-weight: normal;
+  margin: 0;
+}
+h2 {
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 230%;
+  line-height: 1em;
+  padding: 20px 0 0 20px;
+}
+h3 {
+  font-size: 90%;
+  letter-spacing: 0.2em;
+}
+
+p {
+  font-family: "Quattrocento Sans", sans-serif;
+  line-height: 1.4em;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-size: 90%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+/*****************  No JS ***************/
+#billboard {
+  text-align: center;
+}
+.js-warning {
+  display: none;
+}
+
+.no-js .js-warning {
+  display: block;
+  border: 3px solid #fff;
+  text-align: center;
+  background-color: #fff;
+  color: #db5391;
+  padding: 10px;
+}
+
+/********** PIC-VIEWER START **********/
+/********** MAIN PICTURE **********/
+#photo-viewer {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+/* CSS 中的 content 屬性所使用的 url() 引用方式不適合放置於 :after 偽元素中。因為 content 屬性中的 url() 用於背景圖片並不會顯示在內容區域內，而是作為背景處理。以下是正確的方式來引入圖片 */
+#photo-viewer.is-loading:after {
+  content: "";
+  background-image: url("https://www.javascriptbook.com/code/c11/img/load.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#photo-viewer img {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  top: 50%;
+  left: 50%;
+}
+
+/********** THUMBNAILS **********/
+#thumbnails {
+  margin: 10px 5px 0 0;
+  height: 60px;
+}
+
+a.active {
+  opacity: 0.3;
+}
+
+/********** PARTS OF PAGES **********/
+.gallery {
+  width: 400px;
+  padding: 20px;
+  float: left;
+}
+
+.description {
+  width: 180px;
+  float: right;
+  padding: 20px 20px 0 0;
+  font-size: 85%;
+  line-height: 1em;
+}
+
+.standfirst {
+  margin: 0;
+}
+
+/********** BUY BUTTON **********/
+a#buy {
+  background-color: #ed8e6c;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 7px 10px 9px 10px;
+  margin: 5px 0 20px 0;
+  float: right;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+a#buy:hover {
+  background-color: #ed612f;
+}
+/********** PIC-VIEWER END **********/
+
+/********** 燈箱效果 START **********/
+.modal {
+  position: absolute;
+  z-index: 1000;
+  padding: 50px;
+  background-color: #555;
+}
+
+.modal-close {
+  cursor: pointer;
+}
+
+#window {
+  background: #fff;
+  text-align: center;
+}
+
+.social {
+  color: #858585;
+}
+
+#share-options img {
+  display: block;
+  margin: 0 auto;
+}
+
+#share {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#share-options {
+  background-color: #fff;
+  text-align: center;
+  clear: both;
+  padding: 15px;
+  border: 10px solid #e2e2e2;
+}
+
+#message {
+  display: inline-block;
+  margin: 15px 0 15px 0;
+}
+
+#links a {
+  display: inline-block;
+  margin: 0 12px 8px 12px !important;
+}
+
+#window a {
+  margin: 3px;
+}
+
+button.modal-close {
+  background-color: #ed8e6c;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 7px 10px 9px 10px;
+  margin: 10px 0 0 0;
+  float: right;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+button.modal-close:hover {
+  background-color: #ed612f;
+}
+/********** 燈箱效果 END **********/
+
+/********** TABS START **********/
+.tab-list {
+  margin: 0;
+  padding: 0;
+}
+
+.tab-list li {
+  display: inline-block;
+  list-style-type: none;
+  background-color: #303030;
+  border-bottom: 3px solid #858585;
+  font-family: "Jacques Francois", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.tab-list li a {
+  color: #f2f2f2;
+  display: block;
+  padding: 3px 10px 3px 10px;
+}
+
+/********** HOVER STATES **********/
+.tab-list li.active,
+.tab-list li.hover {
+  background-color: #e5e5e5;
+  border-bottom: 3px solid #e5e5e5;
+}
+
+.tab-list li.active a,
+.tab-list li a:hover {
+  color: #666;
+  background-color: #e5e5e5;
+}
+
+/********** PANELS **********/
+.tab-panel {
+  display: none;
+  background-color: #e5e5e5;
+  color: #666;
+  min-height: 150px;
+  overflow: auto;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.tab-panel p {
+  margin: 20px;
+}
+/********** TABS END **********/
+
+/********** ACCORDION START **********/
+.accordion,
+.menu {
+  background-color: #f2f2f2;
+  color: #666;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+.accordion li {
+  padding: 0;
+  list-style-type: none;
+}
+
+.accordion-control {
+  background-color: #303030;
+  color: #fff;
+  display: block;
+  width: 100%;
+  padding: 0.5em 0.5em 0.5em 0.7em;
+  margin: 0;
+  border-top: 1px solid #666;
+}
+.accordion-panel {
+  display: none;
+}
+.accordion-panel p {
+  margin: 20px;
+}
+/********** ACCORDION END **********/
+
+footer {
+  background-color: #303030;
+  text-align: center;
+}
+
+/********** AJAX START **********/
+.people {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+.person-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+.person-card img {
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
